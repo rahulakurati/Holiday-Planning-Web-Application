@@ -28,6 +28,18 @@ namespace tourapplication
             //conn.Open();
             //iTourId = Convert.ToInt32(cmd.ExecuteScalar());
             //conn.Close();
+            imgCarousel1.Src = "pictures\\1\\test1.jpg";
+            imgCarousel2.Src="pictures\\1\\test2.jpg";
+            imgCarousel3.Src = "pictures\\1\\test3.jpg";
+            
+            img1.Src = "pictures\\1\\1\\1.jpg";
+            img2.Src = "pictures\\1\\1\\2.jpg";
+            
+        }
+
+        protected void btnProceed_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("summary.aspx");
         }
     }
 }
