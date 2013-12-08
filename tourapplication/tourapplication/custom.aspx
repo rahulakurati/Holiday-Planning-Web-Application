@@ -15,7 +15,7 @@ head runat="server">
 </head>
 <body>
     
-        <div class="navbar navbar-default" role="navigation">
+        <%--<div class="navbar navbar-default" role="navigation">
               <div class="navbar-header">
                   <a href="#" class="navbar-brand">Make my Tour</a>
               </div>
@@ -32,7 +32,26 @@ head runat="server">
                       <li><a href="register.aspx">Register</a></li>
                   </ul>
               </div> 
-          </div>
+          </div>--%>
+
+    <div class="navbar navbar-default" role="navigation" runat="server" id="divlogin">
+              <div class="navbar-header">
+                  <a href="#" class="navbar-brand">Make my Tour</a>
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li><a href="index.htm">Home</a></li>
+                      <li><a href="topics.htm">Best Tours</a></li>
+                      <li><a href="guidelines.htm">Submission Guidelines</a></li>
+                      <li><a href="aboutus.htm">About Us</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right" runat="server" id="ullogin">
+                      <li runat="server" id="liLogin"><a href="login.aspx" runat="server" id="aLogin">Login</a></li>
+                      <li runat="server" id="liRegister"><a href="register.aspx">Register</a></li>
+                  </ul>
+              </div> 
+     </div>
     <div class="jumbotron">
         <h1 style="font-family:'Segoe WP SemiLight';color:#0101DF;">Order Summary</h1><br />
         <div class="container">
@@ -41,11 +60,18 @@ head runat="server">
                 <table class="table table-bordered table-responsive">
                     <tr>
                         <td class="auto-style1">
-                            <asp:Label ID="Label1" runat="server" Text="Holiday Spot"></asp:Label>
+                            <asp:Label runat="server" Text="Country"></asp:Label>
                         </td>
                         <td>
-                            <asp:Label ID="lblLocation" runat="server"></asp:Label>
+                            <asp:Label ID="lblCountry" runat="server"></asp:Label>
                         </td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style1">
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
                     </tr>
 
                     <tr>

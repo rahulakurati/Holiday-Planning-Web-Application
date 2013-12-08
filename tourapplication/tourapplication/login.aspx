@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <div class="navbar navbar-default" role="navigation">
+    <div class="navbar navbar-default" role="navigation" runat="server" id="divlogin">
               <div class="navbar-header">
                   <a href="#" class="navbar-brand">Make my Tour</a>
               </div>
@@ -33,9 +33,9 @@
                       <li><a href="aboutus.htm">About Us</a></li>
                       <li><a href="#">Support</a></li>
                   </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                      <li class="active"><a href="#">Login</a></li>
-                      <li><a href="register.aspx">Register</a></li>
+                  <ul class="nav navbar-nav navbar-right" runat="server" id="ullogin">
+                      <li runat="server" id="liLogin" class="active"><a href="#" runat="server" id="aLogin">Login</a></li>
+                      <li runat="server" id="liRegister"><a href="register.aspx">Register</a></li>
                   </ul>
               </div> 
           </div>
@@ -54,7 +54,9 @@
                             <td><asp:TextBox CssClass="form-control" TextMode="Password" runat="server" Text="Password" ToolTip="Password" ID="txtPassword"/></td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>
+                                
+                            </td>
                             <td><asp:Button CssClass="btn btn-lg btn-primary btn-block"  Text="Sign In" runat="server" ID="btnSignin" OnClick="btnSignin_Click" /></td>
                         </tr>
                     </table>

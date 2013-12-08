@@ -11,7 +11,11 @@ namespace tourapplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserName"] != null)
+            {
+                liLogin.InnerHtml = "<a href=\"myaccount.aspx\">My Account</a>";
+                liRegister.InnerHtml = "<a href=\"logout.aspx\">Logout</a>";
+            }
         }
     }
 }

@@ -19,7 +19,13 @@ namespace tourapplication
         SqlDataAdapter da;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserName"] != null)
+            {
+                liLogin.InnerHtml = "<a href=\"myaccount.aspx\">My Account</a>";
+                liRegister.InnerHtml = "<a href=\"logout.aspx\">Logout</a>";
+            }
+            else
+                Response.Redirect("index.aspx");
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)

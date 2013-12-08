@@ -21,6 +21,14 @@ namespace tourapplication
         int iTourId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] != null)
+            {
+                liLogin.InnerHtml = "<a href=\"myaccount.aspx\">My Account</a>";
+                liRegister.InnerHtml = "<a href=\"logout.aspx\">Logout</a>";
+            }
+            else
+                Response.Redirect("index.aspx");
+
             //string strDescription = Session["description"].ToString();
             //Session.Remove("description");
             //conn = new SqlConnection(strConn);

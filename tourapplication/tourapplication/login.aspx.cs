@@ -21,7 +21,10 @@ namespace tourapplication
         SqlDataAdapter da;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["UserName"]!=null)
+            {
+                liLogin.InnerHtml = "<a href=\"myaccount.aspx\">My Account</a>";
+            }
         }
 
         protected void btnSignin_Click(object sender, EventArgs e)
@@ -38,6 +41,7 @@ namespace tourapplication
                 
                 if(Convert.ToInt32(ds.Tables[0].Rows[0][0])==1)
                 {
+                    Session["UserName"] = txtEmail.Text;
                     Response.Redirect("index.aspx");
                 }
             }

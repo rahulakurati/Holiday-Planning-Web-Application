@@ -1,6 +1,6 @@
 C:\Users\akurrah\Documents\GitHub\sjsucmpe285\tourapplication\tourapplication\bin\tourapplication.dll.config
 C:\Users\akurrah\Documents\GitHub\sjsucmpe285\tourapplication\tourapplication\bin\tourapplication.dll
 C:\Users\akurrah\Documents\GitHub\sjsucmpe285\tourapplication\tourapplication\bin\tourapplication.pdb
-C:\Users\akurrah\Documents\GitHub\sjsucmpe285\tourapplication\tourapplication\obj\Debug\tourapplication.csprojResolveAssemblyReference.cache
 C:\Users\akurrah\Documents\GitHub\sjsucmpe285\tourapplication\tourapplication\obj\Debug\tourapplication.dll
 C:\Users\akurrah\Documents\GitHub\sjsucmpe285\tourapplication\tourapplication\obj\Debug\tourapplication.pdb
+C:\Users\akurrah\Documents\GitHub\sjsucmpe285\tourapplication\tourapplication\obj\Debug\tourapplication.csprojResolveAssemblyReference.cache

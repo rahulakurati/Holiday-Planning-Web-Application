@@ -35,7 +35,7 @@
      <div class="navbar-wrapper">
       <div class="container">
 
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <%--<div class="navbar navbar-inverse navbar-static-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -66,7 +66,25 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div>--%>
+          <div class="navbar navbar-default" role="navigation" runat="server" id="divlogin">
+              <div class="navbar-header">
+                  <a href="#" class="navbar-brand">Make my Tour</a>
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li><a href="index.htm">Home</a></li>
+                      <li><a href="topics.htm">Best Tours</a></li>
+                      <li><a href="guidelines.htm">Submission Guidelines</a></li>
+                      <li><a href="aboutus.htm">About Us</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right" runat="server" id="ullogin">
+                      <li runat="server" id="liLogin"><a href="login.aspx" runat="server" id="aLogin">Login</a></li>
+                      <li runat="server" id="liRegister"><a href="register.aspx">Register</a></li>
+                  </ul>
+              </div> 
+     </div>
 
       </div>
     </div>

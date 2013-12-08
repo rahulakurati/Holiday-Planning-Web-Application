@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="tourapplication.index" %>
+
+<!DOCTYPE html>
 <html>
   <head>
     <title>Make My Tour</title>
@@ -7,7 +9,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!--slider -->
-    <link rel='stylesheet' id='style-css'  href="css/diapo.css" type='text/css' media='all'> 
+    <link rel='stylesheet' id='style-css'  href="css/diapo.css" type='text/css' media='all'>
+      
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,10 +20,11 @@
     <![endif]-->
   </head>
   <body>
+    <form id="form1" runat="server">
       <div class="container">
-          <div class="navbar navbar-default" role="navigation">
+          <%--<div class="navbar navbar-default" role="navigation" runat="server" id="divNav">
               <div class="navbar-header">
-                  <a href="#" class="navbar-brand">CQR</a>
+                  <a href="#" class="navbar-brand">Make My Tour</a>
               </div>
               <div class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
@@ -30,7 +34,28 @@
                       <li><a href="aboutus.htm">About Us</a></li>
                       <li><a href="">Support</a></li>
                   </ul>
-                  <img class="nav navbar-nav navbar-right img-rounded img-responsive" src="images/COMSOC.gif" style="height:50px;" /> 
+                  <ul class="nav navbar-nav navbar-right" runat="server" id="ullogin">
+                      <li runat="server" id="liLogin"><a href="index.aspx">Login</a></li>
+                      <li runat="server" id="liRegister"><a href="register.aspx">Register</a></li>
+                  </ul>
+              </div> 
+          </div>--%>
+          <div class="navbar navbar-default" role="navigation" runat="server" id="divlogin">
+              <div class="navbar-header">
+                  <a href="#" class="navbar-brand">Make my Tour</a>
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li><a href="index.htm">Home</a></li>
+                      <li><a href="topics.htm">Best Tours</a></li>
+                      <li><a href="guidelines.htm">Submission Guidelines</a></li>
+                      <li><a href="aboutus.htm">About Us</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right" runat="server" id="ullogin">
+                      <li runat="server" id="liLogin"><a href="login.aspx">Login</a></li>
+                      <li runat="server" id="liRegister"><a href="register.aspx">Register</a></li>
+                  </ul>
               </div> 
           </div>
 
@@ -147,6 +172,7 @@
         
     
       </div>
+        </form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
