@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-head runat="server">
+<head runat="server">
     <title>Plan your tour</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
@@ -53,25 +53,19 @@ head runat="server">
               </div> 
      </div>
     <div class="jumbotron">
-        <h1 style="font-family:'Segoe WP SemiLight';color:#0101DF;">Order Summary</h1><br />
+        <h1 style="font-family:'Segoe WP SemiLight';color:#0101DF;">Customize your holiday</h1><br />
         <div class="container">
             <form id="form1" runat="server" class="form-inline">
                 <div style="text-align:center">
                 <table class="table table-bordered table-responsive">
                     <tr>
                         <td class="auto-style1">
-                            <asp:Label runat="server" Text="Country"></asp:Label>
+                            <asp:Label runat="server" Text="Location"></asp:Label>
                         </td>
                         <td>
-                            <asp:Label ID="lblCountry" runat="server"></asp:Label>
+                            <asp:DropDownList ID="ddCountry" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddCountry_SelectedIndexChanged">
+                            </asp:DropDownList>
                         </td>
-                    </tr>
-
-                    <tr>
-                        <td class="auto-style1">
-                            &nbsp;</td>
-                        <td>
-                            &nbsp;</td>
                     </tr>
 
                     <tr>
@@ -79,7 +73,7 @@ head runat="server">
                             <asp:Label ID="Label3" runat="server" Text="Visiting points"></asp:Label>
                         </td>
                         <td>
-                            <asp:Label ID="lblVisitingPoints" runat="server"></asp:Label>
+                            <asp:ListBox ID="lbVisitingPoints" runat="server" SelectionMode="Multiple"></asp:ListBox>
                         </td>
                     </tr>
 
@@ -88,15 +82,9 @@ head runat="server">
                             <asp:Label ID="Label7" runat="server" Text="Transport"></asp:Label>
                         </td>
                         <td>
-                            <asp:Label ID="lblTransport" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style1">
-                            <asp:Label ID="Label2" runat="server" Text="Price"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:Label ID="lblPrice" runat="server"></asp:Label>
+                            <asp:DropDownList ID="ddTransport" runat="server" AutoPostBack="True">
+                                <asp:ListItem Selected="True" Value="0">Select an item</asp:ListItem>
+                            </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
@@ -104,7 +92,17 @@ head runat="server">
                             <asp:Label ID="Label5" runat="server" Text="Duration"></asp:Label>
                         </td>
                         <td>
-                            <asp:Label ID="lblDuration" runat="server"></asp:Label>
+                            <asp:DropDownList ID="ddDays" runat="server" AutoPostBack="True">
+                                <asp:ListItem>1</asp:ListItem>
+                                <asp:ListItem>2</asp:ListItem>
+                                <asp:ListItem>3</asp:ListItem>
+                                <asp:ListItem>4</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>
+                                <asp:ListItem>6</asp:ListItem>
+                                <asp:ListItem>7</asp:ListItem>
+                                <asp:ListItem>8</asp:ListItem>
+                                <asp:ListItem>9</asp:ListItem>
+                            </asp:DropDownList>
                             <asp:Label ID="Label9" runat="server" Text="days"></asp:Label>
                         </td>
                     </tr>
@@ -116,7 +114,7 @@ head runat="server">
                             <asp:LinkButton ID="lbBack" runat="server">Back</asp:LinkButton>
                         </td>
                         <td>
-                            <asp:Button CssClass="btn btn-primary" ID="btnProceed" runat="server" Text="Pay" OnClick="btnProceed_Click" />
+                            <asp:Button CssClass="btn btn-primary" ID="btnEstimate" runat="server" Text="Get Estimate" />
                         </td>
                     </tr>
 

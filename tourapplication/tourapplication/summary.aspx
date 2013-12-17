@@ -65,6 +65,21 @@
                         <td>
                             <asp:Label ID="lblLocation" runat="server"></asp:Label>
                         </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style1">
+                            <asp:Label ID="Label10" runat="server" Text="Start Date"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtCalendar" runat="server"></asp:TextBox>
+                            <asp:Button ID="btnShowCalendar" runat="server" Text="&gt;" OnClick="btnShowCalendar_Click" />
+                        </td>
+                        <td>
+                            <asp:Calendar ID="startCalendar" runat="server" OnDayRender="startCalendar_DayRender" OnSelectionChanged="startCalendar_SelectionChanged" Visible="False"></asp:Calendar>
+                        </td>
                     </tr>
 
                     <tr>
@@ -74,6 +89,8 @@
                         <td>
                             <asp:Label ID="lblVisitingPoints" runat="server"></asp:Label>
                         </td>
+                        <td>
+                            &nbsp;</td>
                     </tr>
 
                     <tr>
@@ -83,6 +100,8 @@
                         <td>
                             <asp:Label ID="lblTransport" runat="server"></asp:Label>
                         </td>
+                        <td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td class="auto-style1">
@@ -90,6 +109,19 @@
                         </td>
                         <td>
                             <asp:Label ID="lblPrice" runat="server"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                                <asp:ListItem>1</asp:ListItem>
+                                <asp:ListItem>2</asp:ListItem>
+                                <asp:ListItem>3</asp:ListItem>
+                                <asp:ListItem>4</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>
+                                <asp:ListItem>6</asp:ListItem>
+                                <asp:ListItem>7</asp:ListItem>
+                                <asp:ListItem>8</asp:ListItem>
+                                <asp:ListItem>9</asp:ListItem>
+                            </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
@@ -100,6 +132,8 @@
                             <asp:Label ID="lblDuration" runat="server"></asp:Label>
                             <asp:Label ID="Label9" runat="server" Text="days"></asp:Label>
                         </td>
+                        <td>
+                            &nbsp;</td>
                     </tr>
 
                     
@@ -109,8 +143,10 @@
                             <asp:LinkButton ID="lbBack" runat="server">Back</asp:LinkButton>
                         </td>
                         <td>
-                            <asp:Button CssClass="btn btn-primary" ID="btnProceed" runat="server" Text="Pay" OnClick="btnProceed_Click" />
+                            <asp:Button CssClass="btn btn-primary" ID="btnProceed" runat="server" Text="Pay" OnClick="btnProceed_Click" Width="103px" />
                         </td>
+                        <td>
+                            &nbsp;</td>
                     </tr>
 
                 </table>

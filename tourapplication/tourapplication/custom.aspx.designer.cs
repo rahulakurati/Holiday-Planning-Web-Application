@@ -67,13 +67,13 @@ namespace tourapplication {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblCountry control.
+        /// ddCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountry;
+        protected global::System.Web.UI.WebControls.DropDownList ddCountry;
         
         /// <summary>
         /// Label3 control.
@@ -85,13 +85,13 @@ namespace tourapplication {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// lblVisitingPoints control.
+        /// lbVisitingPoints control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVisitingPoints;
+        protected global::System.Web.UI.WebControls.ListBox lbVisitingPoints;
         
         /// <summary>
         /// Label7 control.
@@ -103,31 +103,13 @@ namespace tourapplication {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// lblTransport control.
+        /// ddTransport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTransport;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// lblPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrice;
+        protected global::System.Web.UI.WebControls.DropDownList ddTransport;
         
         /// <summary>
         /// Label5 control.
@@ -139,13 +121,13 @@ namespace tourapplication {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// lblDuration control.
+        /// ddDays control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDuration;
+        protected global::System.Web.UI.WebControls.DropDownList ddDays;
         
         /// <summary>
         /// Label9 control.
@@ -166,12 +148,12 @@ namespace tourapplication {
         protected global::System.Web.UI.WebControls.LinkButton lbBack;
         
         /// <summary>
-        /// btnProceed control.
+        /// btnEstimate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProceed;
+        protected global::System.Web.UI.WebControls.Button btnEstimate;
     }
 }

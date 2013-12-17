@@ -121,15 +121,6 @@ namespace tourapplication {
         protected global::System.Web.UI.HtmlControls.HtmlImage img2;
         
         /// <summary>
-        /// img3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage img3;
-        
-        /// <summary>
         /// btnProceed control.
         /// </summary>
         /// <remarks>

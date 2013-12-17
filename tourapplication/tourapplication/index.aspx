@@ -46,11 +46,11 @@
               </div>
               <div class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                      <li><a href="index.htm">Home</a></li>
-                      <li><a href="topics.htm">Best Tours</a></li>
-                      <li><a href="guidelines.htm">Submission Guidelines</a></li>
-                      <li><a href="aboutus.htm">About Us</a></li>
-                      <li><a href="#">Support</a></li>
+                      <li class="active"><a href="index.htm">Home</a></li>
+                      <%--<li><a href="topics.htm">Best Tours</a></li>--%>
+                      <li><a href="search.aspx">Search</a></li>
+                      <li><a href="about.aspx">About Us</a></li>
+                      <li><a href="contact.aspx">Contact Us</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right" runat="server" id="ullogin">
                       <li runat="server" id="liLogin"><a href="login.aspx">Login</a></li>
@@ -60,28 +60,25 @@
           </div>
 
           <div class="jumbotron" style="color:limegreen;">
-              <h1 style="font-family:'Segoe WP SemiLight';color:#0101DF;">Make My Trip</h1><br />
+              <%--<h1 style="font-family:'Segoe WP SemiLight';color:#0101DF;">Make My Trip</h1><br />--%>
               <div id="slider">
                   <div class="pix_diapo">
 
-                    <div data-thumb="images/thumbs/megamind1048.jpg">
-                        <img src="images/slides/megamind1048.jpg">
+                    <div>
+                        <img src="pictures/slider/golden.jpg">
                         <div class="caption elemHover fromLeft">
-                            This is a simple sliding image with caption. You can have more than one caption and decide the layout of the caption via css.
+                            San Francisco has one drawback - ’tis hard to leave this place
                         </div>
                     </div>
                     
-                    <div data-thumb="images/thumbs/megamind_07.jpg">
-                        <img src="images/slides/megamind_07.jpg"> 
+                    <div>
+                        <img src="pictures/slider/greece.jpg"> 
                         <div class="caption elemHover fromRight" style="bottom:65px; padding-bottom:5px; color:#ff0; text-transform:uppercase">
-                            Here you can see two captions.
-                        </div>
-                        <div class="caption elemHover fromLeft" style="padding-top:5px;">
-                            The first are loaded immediately before than the second one
+                            Greece's physical beauty is so stunning that it traps almost everyone into spouting clichés.
                         </div>
                     </div>
                     
-                    <div data-thumb="images/thumbs/wall-e.jpg" data-time="7000">
+                    <%--<div data-thumb="images/thumbs/wall-e.jpg" data-time="7000">
                         <img src="images/slides/wall-e.jpg">
                         <div class="elemHover caption fromLeft" style="bottom:70px; width:auto; -webkit-border-top-right-radius: 6px; -webkit-border-bottom-right-radius: 6px; -moz-border-radius-topright: 6px; -moz-border-radius-bottomright: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px;">
                             You can also get the same effect as the caption with:
@@ -96,16 +93,16 @@
                             Or any other html element...<br>
                             and you can decide the transition time of any slide
                         </div>
-                    </div>
+                    </div>--%>
                     
-                    <div data-thumb="images/thumbs/up-official-trailer-fake.jpg">
-                        <iframe width="940" height="470" src="http://www.youtube.com/embed/qas5lWp7_R0?wmode=transparent&autoplay=1" data-fake="images/slides/up-official-trailer-fake.jpg" frameborder="0" allowfullscreen></iframe>
+                    <div>
+                        <iframe width="940" height="470" src="http://www.youtube.com/embed/-1yXdOufzKE?wmode=transparent&autoplay=1" data-fake="images/slides/up-official-trailer-fake.jpg" frameborder="0" allowfullscreen></iframe>
                         <div class="elemHover caption fromLeft elemToHide" style="bottom: 350px; width:auto; -webkit-border-top-right-radius: 6px; -webkit-border-bottom-right-radius: 6px; -moz-border-radius-topright: 6px; -moz-border-radius-bottomright: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; left:0">
                             You can also display videos, but it requires a "fake image"... read the documentation please
                         </div>
                     </div>
                     
-                    <div data-thumb="images/thumbs/big_buck_bunny.jpg" data-time="7000">
+                    <%--<div data-thumb="images/thumbs/big_buck_bunny.jpg" data-time="7000">
                         <div style="position:absolute; top:0; left:0; width:900px; height:430px; padding:20px; background:#fff; color:#222;">
                         	<div style="float:left; width:300px;">
                                 <p><br><br>You can display any html element directly in the slider, but pay attention, with many elements the transition effect could be slowed.<br>
@@ -157,18 +154,61 @@
                                 </div></div><!-- .price_column --> 
                             </div></div><!-- price_table -->
                         </div>
+                    </div>--%>
+                    
+                    <div>
+                        <img src="pictures/slider/italy.jpg"> 
+                        <div class="caption elemHover fromRight" style="bottom:65px; padding-bottom:5px; color:#ff0; text-transform:uppercase">
+                            Italy, and the spring and first love all together should suffice to make the gloomiest person happy.
+                        </div>
+                        <div class="caption elemHover fromLeft" style="padding-top:5px;">
+                            Never miss the Italian food out there in the streets!
+                        </div>
                     </div>
                     
-                    
-                    <div data-thumb="images/thumbs/ratatouille2.jpg">
-                        <img src="images/slides/ratatouille2.jpg">
+                      <div>
+                        <img src="pictures/slider/london.jpg"> 
+                        <div class="caption elemHover fromRight" style="bottom:65px; padding-bottom:5px; color:#ff0; text-transform:uppercase">
+                            By seeing London, I have seen as much of life as the world can show.
+                        </div>
+                        <div class="caption elemHover fromLeft" style="padding-top:5px;">
+                            Have a delicious dinner in candle light with your loved ones
+                        </div>
                     </div>
-                    
+
+                      <div>
+                        <img src="pictures/slider/sfo.jpg"> 
+                        <div class="caption elemHover fromRight" style="bottom:65px; padding-bottom:5px; color:#ff0; text-transform:uppercase">
+                            Put on your shoes
+                        </div>
+                        <div class="caption elemHover fromLeft" style="padding-top:5px;">
+                            and become start your shopping spree on the streets of SFO!
+                        </div>
+                    </div>
+
+                      <div>
+                        <img src="pictures/slider/Untitled-1.jpg"> 
+                        <div class="caption elemHover fromRight" style="bottom:65px; padding-bottom:5px; color:#ff0; text-transform:uppercase">
+                           The snow here is different from the snow at other places. 
+                        </div>
+                        <div class="caption elemHover fromLeft" style="padding-top:5px;">
+                            It's Netherland Snow.
+                        </div>
+                    </div>
+
+                      <div>
+                        <img src="pictures/slider/Untitled-4.jpg"> 
+                        <div class="caption elemHover fromRight" style="bottom:65px; padding-bottom:5px; color:#ff0; text-transform:uppercase">
+                            Switzerland is a small, steep country, much more up and down than sideways.
+                        </div>
+                        <div class="caption elemHover fromLeft" style="padding-top:5px;">
+                            And is all stuck over with large brown hotels built on the cuckoo clock style of architecture.
+                        </div>
+                    </div>
                </div>
               </div>
               <br /><br />
-              
-          </div>
+            </div>
         
     
       </div>

@@ -53,6 +53,12 @@ namespace tourapplication
             
         }
 
+        protected void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmail.Text.Contains('\''))
+                txtEmail.Text = "";
+        }
+
         
 
         

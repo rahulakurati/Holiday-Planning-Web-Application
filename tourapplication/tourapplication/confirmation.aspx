@@ -48,11 +48,10 @@
               </div>
               <div class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                      <li><a href="index.htm">Home</a></li>
-                      <li><a href="topics.htm">Best Tours</a></li>
-                      <li><a href="guidelines.htm">Submission Guidelines</a></li>
-                      <li><a href="aboutus.htm">About Us</a></li>
-                      <li><a href="#">Support</a></li>
+                      <li><a href="index.aspx">Home</a></li>
+                      <li><a href="search.aspx">Search</a></li>
+                      <li><a href="about.aspx">About Us</a></li>
+                      <li><a href="contact.aspx">Support</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right" runat="server" id="ullogin">
                       <li runat="server" id="liLogin"><a href="login.aspx" runat="server" id="aLogin">Login</a></li>

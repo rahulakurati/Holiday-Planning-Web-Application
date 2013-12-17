@@ -47,7 +47,7 @@
                     <table>
                         <tr>
                             <td style="font-size:medium;">Email Address</td>
-                            <td><asp:TextBox CssClass="form-control"  TextMode="Email" runat="server" ToolTip="Username/Email address" ID="txtEmail" ></asp:TextBox></td>
+                            <td><asp:TextBox CssClass="form-control"  TextMode="Email" runat="server" ToolTip="Username/Email address" ID="txtEmail" AutoPostBack="True" MaxLength="15" OnTextChanged="txtEmail_TextChanged" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td style="font-size:medium;">Password</td>

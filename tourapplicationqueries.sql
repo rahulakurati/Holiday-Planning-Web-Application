@@ -10,6 +10,8 @@ select count(*) from tbl_user where email='rah@sjsu.edu' and password='123';
 select * from tbl_user;
 
 INSERT INTO tbl_User VALUES('Rahul','Akurati','rahul@sjsu.edu','123');
+INSERT INTO tbl_User VALUES('Rahul','Akurati','rahul@sjsu.edu','123');
+select * from tbl_user
 
 INSERT INTO tbl_tourtypes VALUES('1','Heart of Silicon Valley','Flight','San Jose',5,5349)
 INSERT INTO tbl_tourtypes VALUES('2','The Big Apple','Flight','New York',6,7475);
@@ -19,7 +21,7 @@ INSERT INTO tbl_tourtypes VALUES('5','the City of Angels','Train','Los Angeles',
 INSERT INTO tbl_tourtypes VALUES('6','The Eternal City','Flight','Rome',10,12523);
 
 
-select * from tbl_tourtypes;
+select distinct location from tbl_tourtypes order by location;
 
 drop table tbl_user;
 
@@ -34,15 +36,28 @@ Price float);
 
 select tourid from tbl_tourtypes where description='Heart of Silicon Valley';
 
+drop table tbl_points;
 create table tbl_points(
+tourpointid int IDENTITY(1,1) PRIMARY KEY,
 tourid int,
-tourpointid int PRIMARY KEY,
 tourpointdescription varchar(25));
 
+insert into tbl_points values(1,'HP Pavillion');
+insert into tbl_points values(1,'Spartan Stadium');
+select tourpointid,tourpointdescription from tbl_points where tourid=(select tourid from tbl_tourtypes where location='San Jose');
+
+drop table tbl_tourtransport;
 create table tbl_tourtransport(
+transportid int identity(1,1) PRIMARY KEY,
 tourid int,
-transportid int PRIMARY KEY,
 transportdescription varchar(25));
+
+insert into tbl_tourtransport values(1,'Flight');
+insert into tbl_tourtransport values(1,'Train');
+insert into tbl_tourtransport values(1,'Bus');
+insert into tbl_tourtransport values(1,'Rental Car');
+
+select transportid,transportdescription from tbl_tourtransport where tourid=1;
 
 create table tbl_picture(
 tourid int,
@@ -52,10 +67,16 @@ picname varchar(25),
 picdescription varchar(25),
 picpath varchar(50));
 
+drop table tbl_order;
 create table tbl_order(
-orderid int PRIMARY KEY,
+orderid int IDENTITY(1,1) PRIMARY KEY,
 email varchar(30),
 tourid int,
 status varchar(15));
 
-select description,transport,length,price from tbl_tourtypes where location='san jose';
+insert into tbl_order values('rahul@sjsu.edu',1,'confirmed');
+insert into tbl_order OUTPUT INSERTED.orderid values('rahul@sjsu.edu',1,'confirmed')
+select * from tbl_order;
+
+select description,transport,length,price from tbl_tourtypes where location='san jose'
+select distinct location,tourid from tbl_tourtypes order by location

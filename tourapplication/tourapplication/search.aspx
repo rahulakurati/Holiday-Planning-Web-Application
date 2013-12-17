@@ -51,19 +51,17 @@
         <div class="container">
 
             <asp:Label ID="lblSearchText" runat="server" Text="I want to go to"></asp:Label><br />
-            <%--<ul >
-                <li class="list-inline"><asp:TextBox CssClass="form-control" Width="40%" ID="TextBox1" runat="server"></asp:TextBox></li>
-                <li class="list-inline"><asp:Button CssClass="btn btn-primary" ID="btnSearch" runat="server" Text="Search Holidays" /></li>
-            </ul>
-            <asp:TextBox CssClass="form-control" Width="40%" ID="txtSearchTour" runat="server"></asp:TextBox>--%>
             <form id="form1" runat="server" class="form-inline">
                 <asp:TextBox CssClass="form-control" Width="40%" ID="txtSearchTour" runat="server"></asp:TextBox>
                 <asp:Button CssClass="btn btn-primary" ID="btnSearch" runat="server" Text="Search Holidays" OnClick="btnSearch_Click" />
                 <br />
+                <br />
                 <asp:GridView ID="gvSearchResults" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvSearchResults_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CommandField HeaderText="Select" ShowHeader="True" ShowSelectButton="True" />
+                        <asp:CommandField HeaderText="Select" ShowHeader="True" ShowSelectButton="True" >
+                        <ControlStyle ForeColor="Blue" />
+                        </asp:CommandField>
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -76,6 +74,14 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
+                <asp:Label ID="Label1" runat="server" Text="or" Visible="False"></asp:Label>
+&nbsp;<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/custom.aspx" Visible="False">want to customize your holiday?</asp:HyperLink>
+
+         <a href="http://www.accuweather.com/en/us/san-jose-ca/95110/air-travel-current-weather/347630" class="aw-widget-legal">
+<!--
+By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+-->
+</a><div id="awtd1387049417001" class="aw-widget-36hour"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awtd1387049417001" data-editlocation="true" data-lifestyle="air-travel"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
             </form>
 
             

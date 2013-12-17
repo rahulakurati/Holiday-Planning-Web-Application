@@ -26,6 +26,9 @@ namespace tourapplication
             }
             else
                 Response.Redirect("index.aspx");
+
+            Label1.Visible = false;
+            HyperLink1.Visible = false;
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -40,12 +43,19 @@ namespace tourapplication
             gvSearchResults.DataSource = ds;
             gvSearchResults.DataBind();
             gvSearchResults.CssClass = "table table-hover table-bordered";
+
+            Label1.Visible = true;
+            HyperLink1.Visible = true;
         }
 
         protected void gvSearchResults_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow gr = gvSearchResults.SelectedRow;
+            Session["Location"] = txtSearchTour.Text;
             Session["description"] = gr.Cells[1].Text;
+            Session["transport"] = gr.Cells[2].Text;
+            Session["length"] = gr.Cells[3].Text;
+            Session["price"] = gr.Cells[4].Text;
             Response.Redirect("details.aspx");
         }
     }

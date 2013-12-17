@@ -26,6 +26,41 @@ namespace tourapplication
             }
             else
                 Response.Redirect("index.aspx");
+            
+            if (lblVisitingPoints.Text == "")
+            {
+                try
+                {
+                    string strcmd = "select tourpointdescription from tbl_points where tourid=(select tourid from tbl_tourtypes where location='" + Session["Location"].ToString() + "')";
+                    conn = new SqlConnection(strConn);
+                    cmd = new SqlCommand(strcmd, conn);
+                    ds = new DataSet();
+                    da = new SqlDataAdapter(cmd);
+                    da.Fill(ds);
+
+                    foreach (DataTable table in ds.Tables)
+                    {
+                        foreach (DataRow row in table.Rows)
+                        {
+                            lblVisitingPoints.Text += row.ItemArray[0];
+                            lblVisitingPoints.Text += ",";
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                finally
+                {
+
+                }
+            }
+            lblLocation.Text = Session["Location"].ToString();
+            lblTransport.Text = Session["transport"].ToString();
+            lblDuration.Text = Session["length"].ToString();
+            lblPrice.Text = Session["price"].ToString()+" $";
         }
 
         protected void btnProceed_Click(object sender, EventArgs e)
@@ -38,6 +73,34 @@ namespace tourapplication
             Session["OrderId"] = iStatus.ToString();
 
             Response.Redirect("confirmation.aspx");
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblPrice.Text = (Convert.ToInt32(Session["price"].ToString()) * Convert.ToInt32(DropDownList1.SelectedValue.ToString())).ToString();
+            lblPrice.Text += " $";
+        }
+
+        protected void btnShowCalendar_Click(object sender, EventArgs e)
+        {
+            startCalendar.Visible = true;
+            btnShowCalendar.Enabled = false;
+        }
+
+        protected void startCalendar_SelectionChanged(object sender, EventArgs e)
+        {
+            txtCalendar.Text = startCalendar.SelectedDate.ToString();
+            btnShowCalendar.Enabled = true;
+            startCalendar.Visible = false;
+        }
+
+        protected void startCalendar_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if(e.Day.Date<DateTime.Now.Date)
+            {
+                e.Day.IsSelectable = false;
+                e.Cell.Font.Strikeout = true;
+            }
         }
     }
 }

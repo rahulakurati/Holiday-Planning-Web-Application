@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about.aspx" />
     <Content Include="bootstrap\css\bootstrap-theme.css" />
     <Content Include="bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
@@ -65,6 +66,7 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="confirmation.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="css\carousel.css" />
     <Content Include="css\diapo.css" />
     <Content Include="css\image-slider.css" />
@@ -116,6 +118,13 @@
     <Content Include="pictures\1\test1.jpg" />
     <Content Include="pictures\1\test2.jpg" />
     <Content Include="pictures\1\test3.jpg" />
+    <Content Include="pictures\slider\golden.jpg" />
+    <Content Include="pictures\slider\greece.jpg" />
+    <Content Include="pictures\slider\italy.jpg" />
+    <Content Include="pictures\slider\london.jpg" />
+    <Content Include="pictures\slider\sfo.jpg" />
+    <Content Include="pictures\slider\Untitled-1.jpg" />
+    <Content Include="pictures\slider\Untitled-4.jpg" />
     <Content Include="register.aspx" />
     <Content Include="scripts\diapo.js" />
     <Content Include="scripts\diapo.min.js" />
@@ -128,12 +137,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
     <Compile Include="confirmation.aspx.cs">
       <DependentUpon>confirmation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="confirmation.aspx.designer.cs">
       <DependentUpon>confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="custom.aspx.cs">
       <DependentUpon>custom.aspx</DependentUpon>
